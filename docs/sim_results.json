@@ -1,0 +1,76 @@
+{
+ "frame_cad_g": 8.81,
+ "frame_printed_g": 8.95,
+ "mass_budget_g": {
+  "Primus V5 board": 10.4,
+  "Pluto 600 battery": 16.0,
+  "4 x motor (7 x 20)": 12.8,
+  "4 x 55 mm prop": 2.4,
+  "4 dampers + 4 M2 screws": 1.4,
+  "canopy (stock)": 3.0,
+  "frame (this design)": 8.95
+ },
+ "auw_g": 55.0,
+ "auw_with_stock_propguards_g": 59.8,
+ "motor": {
+  "type": "7 x 20",
+  "full_throttle_rpm": 26858,
+  "current_per_motor_A": 1.54,
+  "thrust_per_motor_g": 22.4,
+  "for_comparison_8520_rpm": 29543,
+  "for_comparison_8520_thrust_g": 27.1
+ },
+ "thrust_per_motor_g": 22.4,
+ "thrust_to_weight": 1.63,
+ "hover_throttle_fraction_of_max_thrust": 0.61,
+ "hover_rpm_est": 21020,
+ "cg_mm": [
+  -0.03,
+  0.27,
+  11.0
+ ],
+ "inertia_kgm2_diag": [
+  4.698e-05,
+  4.566e-05,
+  8.691e-05
+ ],
+ "inertia_stock_estimate_kgm2_diag": [
+  4.624e-05,
+  4.494e-05,
+  8.555e-05
+ ],
+ "cg_offset_from_thrust_centre_mm": 0.27,
+ "arm": {
+  "cantilever_mm": 34.1,
+  "section_area_cad_mm2": 13.92,
+  "section_area_grid_mm2": 12.53,
+  "I_vertical_mm4": 24.3,
+  "I_lateral_mm4": 68.2,
+  "neutral_axis_z_mm": 2.94,
+  "tip_deflection_at_max_thrust_mm": 0.0762,
+  "root_stress_at_max_thrust_MPa": 1.04,
+  "first_mode_vertical_Hz": 140,
+  "first_mode_lateral_Hz": 235,
+  "rotor_rate_at_hover_Hz": 350,
+  "blade_pass_at_hover_Hz": 701,
+  "tip_load_to_yield_vertical_N": 9.72,
+  "equiv_g_on_motor_vertical": 239,
+  "tip_load_to_yield_lateral_N": 25.82,
+  "equiv_g_on_motor_lateral": 634
+ },
+ "attitude_sim_new": {
+  "rise_to_90pct_s": 0.164,
+  "overshoot_deg": -0.04,
+  "settle_2pt5pct_s": 0.218,
+  "peak_after_bump_deg": 0.97,
+  "time_motor_saturated_frac": 0.0
+ },
+ "attitude_sim_stock_estimate": {
+  "rise_to_90pct_s": 0.166,
+  "overshoot_deg": -0.04,
+  "settle_2pt5pct_s": 0.218,
+  "peak_after_bump_deg": 0.97,
+  "time_motor_saturated_frac": 0.0
+ },
+ "plot_error": "No module named 'matplotlib'"
+}

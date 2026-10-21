@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.DS_Store
+docs/sim_logs.npz
+*.gcode
+*.gcode.3mf

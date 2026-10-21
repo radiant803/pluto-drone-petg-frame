@@ -1,0 +1,49 @@
+{
+ "printer": "Bambu Lab P1S 0.4, Bambu PETG Basic, 0.16mm Optimal base; grams include a 4 mm brim",
+ "motor_fit_coupon": {
+  "recommended": {
+   "profile": {
+    "wall_loops": "3",
+    "top_shell_layers": "5",
+    "bottom_shell_layers": "4",
+    "sparse_infill_density": "40%",
+    "layer_height": "0.16"
+   },
+   "return": 0,
+   "filament_mm": 3116.27,
+   "grams": 9.52,
+   "time": "43m 13s",
+   "note": "includes a 4 mm outer brim"
+  }
+ },
+ "pluto_frame": {
+  "recommended": {
+   "profile": {
+    "wall_loops": "3",
+    "top_shell_layers": "5",
+    "bottom_shell_layers": "4",
+    "sparse_infill_density": "40%",
+    "layer_height": "0.16"
+   },
+   "return": 0,
+   "filament_mm": 3046.21,
+   "grams": 9.31,
+   "time": "39m 26s",
+   "note": "includes a 4 mm outer brim"
+  },
+  "light": {
+   "profile": {
+    "wall_loops": "2",
+    "top_shell_layers": "4",
+    "bottom_shell_layers": "3",
+    "sparse_infill_density": "15%",
+    "layer_height": "0.16"
+   },
+   "return": 0,
+   "filament_mm": 2925.5,
+   "grams": 8.94,
+   "time": "37m 44s",
+   "note": "includes a 4 mm outer brim"
+  }
+ }
+}
