@@ -18,10 +18,13 @@ It's one PETG part that takes all of the kit's stock electronics: the Primus V5 
 |---|---|---|
 | [`out/pluto_frame.stl`](out/pluto_frame.stl) ([.3mf](out/pluto_frame.3mf), [.step](out/pluto_frame.step)) | **The frame** for 0720 motors (7 x 20 mm), with the +0.15 mm shrink allowance | about 39 min, 9.3 g |
 | [`out/motor_fit_coupon.stl`](out/motor_fit_coupon.stl) ([.3mf](out/motor_fit_coupon.3mf), [.step](out/motor_fit_coupon.step)) | **Motor fit coupon**: 20 test sleeves (5 motor sizes x 4 grip levels), each identical to the frame's motor tube, with the same +0.15 mm allowance | about 43 min, 9.5 g |
+| [`out/pluto_canopy_flat.stl`](out/pluto_canopy_flat.stl) | **Canopy** (flat, vented): protects the Primus V5, attaches to the stock screws and dampers. Print it as is (roof already on the bed), no supports, no brim | about 14 min, 2.9 g |
 
 \* Bambu Lab P1S, 0.4 mm nozzle, PETG, 0.16 mm layers, 3 walls, 40% gyroid, 4 mm brim (included in the weight). The frame is about 9.0 g once the brim is peeled off.
 
-Both files are already in print orientation: flat side down, **no supports**. Full settings are in [docs/PRINTING.md](docs/PRINTING.md).
+The frame and coupon are already in print orientation: flat side down, **no supports**. The canopy is also print-ready: roof down, no supports. Full settings are in [docs/PRINTING.md](docs/PRINTING.md).
+
+> **Canopy:** `out/pluto_canopy_flat.stl` is the flat, vented canopy. It attaches with the stock screws and dampers. Print it roof-down with no supports and no brim.
 
 **Not sure which motors you have, or printing on a different printer?** Print the coupon first (or just its 7.0 row). See [docs/MOTOR_FIT_TEST.md](docs/MOTOR_FIT_TEST.md).
 
