@@ -6,6 +6,8 @@ It's one PETG part that takes all of the kit's stock electronics: the Primus V5 
 
 ![frame](docs/images/frame_iso.png)
 
+> **Compatibility (v1):** works best with a **plain Pluto 1.2, with no extra modules**. This version has no mounting points, cable routing or strain relief for add-ons (camera, sensors, LEDs, buzzer, payload holders). A module may still work, but it may also put stress on the board and its connectors. Support for modules will be improved in future versions. Details: [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md).
+
 > **Unofficial community project.** Not made, endorsed or supported by Drona Aviation. "Pluto", "Primus" and "Drona Aviation" are names of their products and company and are used here only to say what this frame fits. Fly safely and follow your local drone rules.
 
 ---
@@ -60,6 +62,17 @@ This matches the A/B prop figure in the Pluto 1.2 manual and the QuadX motor ord
 
 ---
 
+## Compatibility
+**v1 works best with the plain Pluto 1.2: board, motors, props, battery and canopy, with no extra modules.** That's the setup every design check and the simulation used.
+
+**Add-on modules** (the Wi-Fi camera, sensor and motor modules, Drona's printed holders for a buzzer, LED, gas, motion or sound sensor, payload holders) **aren't supported in this version**, because the frame has no support system for them:
+- **no mounting points**, so a module's weight ends up hanging on the board, its small connectors and their solder joints, which aren't made to carry loads, especially through landings and crashes;
+- the board sits on **soft rubber dampers**, and extra mass or a pulling cable changes the vibration isolation and can tilt the board, causing drift and noisy sensor readings;
+- **less spare thrust:** with 0720 motors, a full 10 g payload takes it from about 1.6 to about 1.4 thrust-to-weight and from 61% to about 73% hover throttle;
+- **no cable routing**, so loose cables can reach the props, and an off-centre module upsets the balance.
+
+A light module **may still work**, but in this version it **may also put stress on the board and connectors**. If you try one, strap the module to the frame (never let it hang from its cable), leave slack in the cable, keep it centred and recalibrate. **Module support will be improved in future versions:** a frame-mounted accessory deck, a camera mount, cable clips and strain relief, balanced mounting positions, checks with modules fitted, prop guard points, and an 8520 option. Full write-up: [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md).
+
 ## Why the tolerances matter (short version)
 Printed holes come out a little smaller than designed. On our Bambu P1S in PETG, a sleeve drawn exactly to the motor's size plus the intended grip was just too tight: the 0720 motor stopped short of the lip. Adding **+0.15 mm** to the bore and to the rib circle made the motor press fully home and hold firmly. That allowance is built into both the frame and the coupon. If your printer prints holes tighter or looser, use the coupon to check, and change one number in the source. The full story, with numbers: **[docs/TOLERANCES.md](docs/TOLERANCES.md)**.
 
@@ -81,6 +94,7 @@ The motor positions and the mounting are the same as stock, so the stock flight 
 These are model estimates, not thrust-stand measurements. **No flight test had been done when this was published.** Please open an issue with your results.
 
 ## Known limitations
+- **No support for add-on modules yet:** best with a plain Pluto 1.2; see [Compatibility](#compatibility).
 - **The stock prop guards don't clip on.** They lock onto lugs on the stock motor mounts, and those aren't documented.
 - **The motor tubes are for 0720 motors.** For other sizes (the Primus also supports 0615, 8520 and 1020 motors), change `MOTOR_D` in the source and regenerate; see below.
 - **Hole spacing and motor positions were measured from Drona's to-scale manual drawing.** The 41 mm hole spacing looked right against a real board, but wasn't measured with calipers. The screws were assumed to be M2. Sources and confidence levels are in [docs/SPECS.md](docs/SPECS.md).
@@ -109,14 +123,14 @@ python tools/export.py              # rebuilds out/pluto_frame.* and out/motor_f
 ## Repository layout
 ```
 out/            print files (STL, 3MF, STEP), already in print orientation
-docs/           TOLERANCES, MOTOR_FIT_TEST, PRINTING, ASSEMBLY, SIMULATION, SPECS, DESIGN + images and result data
+docs/           COMPATIBILITY, TOLERANCES, MOTOR_FIT_TEST, PRINTING, ASSEMBLY, SIMULATION, SPECS, DESIGN + images and result data
 src/            parametric source: p_params (all dimensions), p_parts (frame), p_coupon (fit coupon), p_asm (stand-ins for the bought parts)
 kerf_scripts/   builds with design checks: frame.py (49 checks), part.py (export pose), coupon.py (87 checks)
 tools/          export.py, sim.py + plot_sim.py, slice.py, local check helpers, label stroke check
 ```
 
 ## Contributing
-Flight reports, photos, fit results on other printers and motor sizes, and prop-guard designs are all very welcome. Open an issue or a pull request. If you change the shrink allowance for your printer, please say which printer, filament and settings you used, so others can compare.
+Flight reports, photos, fit results on other printers and motor sizes, module-mount requests (with the module's weight, size and connector position) and prop-guard designs are all very welcome. Open an issue or a pull request. If you change the shrink allowance for your printer, please say which printer, filament and settings you used, so others can compare.
 
 ## Credits and licence
 Specs were researched from Drona Aviation's public Pluto 1.2 manual, their hardware parts pages and the open-source MagisV2 firmware (links in [docs/SPECS.md](docs/SPECS.md)). No Drona images or files are redistributed here.

@@ -51,6 +51,9 @@ Each arm is a Π section, 6.2 mm wide and 4.8 mm tall: a 1.2 mm top plate carryi
 | Prop speed at hover | about 350 Hz, so the arm resonances sit well below the main shaking from the props |
 | Static tip load that would bend the arm root permanently, down / sideways | about 9.7 N / 26 N |
 
+## Not modelled: add-on modules
+Everything here is for the plain Pluto 1.2 with no extra modules. What a module would do to thrust margin, balance and board vibration is covered in [COMPATIBILITY.md](COMPATIBILITY.md).
+
 ## Limits of the model
 - The prop coefficients are textbook values, and motor and prop masses are typical rather than weighed.
 - No aerodynamic drag, ground effect or blade flapping.

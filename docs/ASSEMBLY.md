@@ -1,5 +1,7 @@
 # Assembly
 
+This guide is for a **plain Pluto 1.2 with no extra modules**. Add-ons aren't supported in this version; see [COMPATIBILITY.md](COMPATIBILITY.md).
+
 You need the parts from a Pluto 1.2 kit: the Primus V5 board, 4 rubber dampers and 4 screws, 4 motors, props (A and B), the Pluto 600 battery, the canopy, and the prop tool and screwdriver. The order follows the official manual.
 
 ![assembly](images/assembly_iso.png)
